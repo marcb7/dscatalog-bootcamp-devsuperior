@@ -1,8 +1,10 @@
-import React from 'react';
+import './core/assets/styles/custom.scss';
+import './app.scss';
+import Navbar from './core/components/Navbar';
 
 const App = () => {     // Isso é a mesma coisa que escrever function App(), como no JavaScript
     return(
-        <h1>App</h1>
+        <Navbar/>
     );
 }
 

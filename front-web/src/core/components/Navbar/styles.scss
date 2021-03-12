@@ -1,0 +1,37 @@
+.main-nav {
+    height: 70px;
+    color: #FFF;
+    align-items: center;
+    padding-left: 40px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.nav-logo-text {
+    color: #FFF;
+}
+
+.main-menu {
+    display: flex;
+    font-size: 18px;
+    width: 380px;
+    justify-content: space-between;
+    
+    a {
+        font-style: normal; // retira aquele sublinhado que aparece em todo link.
+        color: rgba(255, 255, 255, 0.5);
+
+        // O caractere & é usado para fazer referência ao elemento ascendente, que no caso aqui é a tag 'a'.
+
+        // '&.active' significa que, toda tag <a> que está dentro de main-menu e que tenha na própria tag <a> a className "active", receberá certos estilos.
+        &.active {
+            font-weight: bold;
+            color: #FFF;
+        }
+
+        &:hover {   // hover é quando passa o mouse por cima do link e faz um efeito, como mudar a cor, o tamanho..
+            color: #FFF;
+        }
+    }
+
+}

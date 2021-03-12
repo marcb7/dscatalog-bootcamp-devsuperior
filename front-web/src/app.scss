@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* { // O * significa que em qualquer elemento da aplicação, o font-family será o Open sans.
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0;
+    font-weight: 700;
+  }
+  
+  ul {
+    list-style-type: none;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+  
+  a {
+    &:hover {
+      text-decoration: none;
+      color: unset;  //unset vai zerar o comportamento padrão que o Bootstrap tem com os links, e vai herdar, aqui no nosso caso, a cor que foi definida para a navbar me styles.scss
+    }
+  }
