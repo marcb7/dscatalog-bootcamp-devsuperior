@@ -1,10 +1,10 @@
 import './core/assets/styles/custom.scss';
 import './app.scss';
-import Navbar from './core/components/Navbar';
+import Routes from './Routes';
 
 const App = () => {     // Isso é a mesma coisa que escrever function App(), como no JavaScript
     return(
-        <Navbar/>
+        <Routes/>
     );
 }
 

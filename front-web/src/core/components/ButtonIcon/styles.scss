@@ -1,0 +1,20 @@
+.btn-icon {
+    height: 70px;
+    width: 380px;
+    border-radius: 10px 0 0 10px;
+    text-transform: uppercase; // Coloca o texto todo em maiúsculo
+}
+
+.btn-icon-content {
+    background-color: #33569b;
+    width: 70px;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// border-radius customizado:
+// Passando um valor apenas -> aplica em todas as bordas
+// Passando 4 valores -> Ex: 10px 0 0 10px;
+// 10px (borda superior esquerda); 0 (borda superior direita); 0 (borda inferior direita); 10px (borda inferior esquerda)

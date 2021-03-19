@@ -1,28 +1,29 @@
 import './styles.scss';
+import {Link, NavLink} from 'react-router-dom';
 
 const Navbar = () => (
     <nav className="row bg-primary main-nav">
         <div className="col-2">
-            <a href="url" className="nav-logo-text">
+            <Link to="/" className="nav-logo-text">
                 <h4>DS Catalog</h4>
-            </a>
+            </Link>
         </div>
         <div className="col-6 offset-2">
             <ul className="main-menu">
                 <li>
-                    <a href="url" className="active">
+                    <NavLink to="/" activeClassName="active" exact>
                         HOME
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="url">
+                    <NavLink to="/catalog" activeClassName="active">
                         CATÁLOGO
-                    </a>
+                    </NavLink>
                 </li>
                 <li>
-                    <a href="url">
+                    <NavLink to="/admin" activeClassName="active">
                         ADMIN
-                    </a>
+                    </NavLink>
                 </li>
             </ul>
         </div>
@@ -30,3 +31,5 @@ const Navbar = () => (
 )
 
 export default Navbar;
+
+// <Link to é o substituro do <a href

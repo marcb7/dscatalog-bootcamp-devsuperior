@@ -1,9 +1,9 @@
 .main-nav {
-    height: 70px;
-    color: #FFF;
-    align-items: center;
-    padding-left: 40px;
-    margin-left: 0;
+    height: 70px;           // Altura da navbar
+    color: #FFF;          // Cor do texto
+    align-items: center;    // Alinhamento do texto
+    padding-left: 40px;     // Espaçamento à esquerda do conteúdo da navbar
+    margin-left: 0;         // 
     margin-right: 0;
 }
 
@@ -15,15 +15,15 @@
     display: flex;
     font-size: 18px;
     width: 380px;
-    justify-content: space-between;
+    justify-content: space-between; //Justifica os elementos HOME, CATÁLOGO e ADMIN do menu para não ficarem muito juntos.
     
+    // a {} é um artifíco do Sass para personalizar os links que estão dentro de main-menu. Toda tag 'a' que está dentro de main-menu vai receber os estilos passados dentro desse a {}
     a {
         font-style: normal; // retira aquele sublinhado que aparece em todo link.
         color: rgba(255, 255, 255, 0.5);
 
+        // '&.active' significa que, toda tag <a> que está dentro de main-menu e que tenha na própria tag <a> a className "active", receberá estilos específicos.
         // O caractere & é usado para fazer referência ao elemento ascendente, que no caso aqui é a tag 'a'.
-
-        // '&.active' significa que, toda tag <a> que está dentro de main-menu e que tenha na própria tag <a> a className "active", receberá certos estilos.
         &.active {
             font-weight: bold;
             color: #FFF;
