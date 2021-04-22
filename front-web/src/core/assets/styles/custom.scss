@@ -1,9 +1,11 @@
 $theme-colors: (
     "primary": #407BFF
 );
+// $theme-colors é uma variável do sass. São as cores do tema do Bootstrap.
 
 $body-bg: #E5E5E5;
 $body-color: #263238;
+// $body-bg: ; é a cor do background. $body-color: ; é a cor do texto da página.
 
-// Importar Bootstrap e suas variáveis padrão
+// Importa o Bootstrap e suas variáveis padrão
 @import '~bootstrap/scss/bootstrap.scss';

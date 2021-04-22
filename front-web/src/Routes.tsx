@@ -1,7 +1,9 @@
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Navbar from './core/components/Navbar';
 import Admin from './pages/Admin';
 import Catalog from './pages/Catalog';
+import ProductDetails from './pages/Catalog/components/ProductDetails';
 import Home from './pages/Home';
 // BrowserRouter vai encapsular toda a aplicação, ou seja, ele vai gerenciar todas as rotas disponíveis.
 // O Switch vai decidir qual rota ele tem que renderizar.
@@ -14,8 +16,11 @@ const Routes = () => (
             <Route path="/" exact>
                 <Home />
             </Route>
-            <Route path="/catalog">
+            <Route path="/products" exact>
                 <Catalog />
+            </Route>
+            <Route path="/products/:productId">
+                <ProductDetails />
             </Route>
             <Route path="/admin">
                 <Admin />
