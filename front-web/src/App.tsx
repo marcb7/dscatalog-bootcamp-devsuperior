@@ -3,8 +3,8 @@ import './app.scss';
 import Routes from './Routes';
 
 const App = () => {     // Isso é a mesma coisa que escrever function App(), como no JavaScript
-    return(
-        <Routes/>
+    return (
+        <Routes />
     );
 }
 
