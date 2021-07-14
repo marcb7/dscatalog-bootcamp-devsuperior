@@ -5,16 +5,18 @@ import { makeRequest } from 'core/utils/request';
 import ProductCard from './components/ProductCard';
 import ProductCardLoader from './components/Loaders/ProductCardLoader';
 import './styles.scss';
+import Pagination from 'core/components/Pagination';
 
 const Catalog = () => {
     const [productsResponse, setProductsResponse] = useState<ProductsResponse>();
     const [isLoading, setIsLoading] = useState(false);
+    const [activePage, setActivePage] = useState(0);  // estado que representa qual é a página ativa que stá sendo renderizada.
 
     // quando o componente iniciar, buscar a lista de produtos
     useEffect(() => {
         // Configurar as query strings
         const params = {
-            page: 0,
+            page: activePage,
             linesPerPage: 12
         }
         // iniciar o loader
@@ -26,7 +28,7 @@ const Catalog = () => {
                 // finaliza o loader
                 setIsLoading(false);
             })
-    }, []);
+    }, [activePage]);
 
     return (
         <div className="catalog-container">
@@ -42,8 +44,20 @@ const Catalog = () => {
                     ))
                 )}
             </div>
+            {productsResponse && (
+                <Pagination
+                    totalPages={productsResponse.totalPages}
+                    activePage={activePage}
+                    onChange={page => setActivePage(page)}
+                />
+            )}
         </div>
     );
 }
 
 export default Catalog;
+
+// Só pode exibir o componente de paginação depois que houver uma resposta do backend:
+
+// Se houver productResponse (se houver resposta do backend), então será exibido o componente de paginação.
+// {productsResponse && <Pagination totalPages={productsResponse.totalPages} />}
